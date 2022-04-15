@@ -15,5 +15,4 @@ def super_types_list(request):
         supers = Supers.objects.filter(super_type_id=super_type_id)
         supers_serializer = SupersSerializer(supers, many=True)
         
-
-return Response(custom_response_dictionary)
+    return Response(custom_response_dictionary)
