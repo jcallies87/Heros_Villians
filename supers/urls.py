@@ -2,6 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    
-    path('<int:pk>/', views.super_hero)
+    path(' ', views.supers_detail),
+    path('<int:pk>/', views.supers_list)
 ]

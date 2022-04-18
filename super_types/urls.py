@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     
-    path('<int:pk>/', views.super_hero)
+    path('<int:pk>/', views.super_types_list)
 ]

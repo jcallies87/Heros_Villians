@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('super_types', '0001_initial'),
+        ( 'super_types','0001_initial'),
     ]
 
     operations = [
