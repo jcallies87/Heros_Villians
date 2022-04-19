@@ -9,10 +9,15 @@ from supers.serializers import SupersSerializer
 # Create your views here.
 @api_view(['GET'])
 def super_types_list(request):
+    custom_response_dictionary = {}    
     super_types = SuperType.objects.all()
-    custom_response_dictionary = {}
-    for super_type in super_types:
-        supers = Supers.objects.filter(super_type_id=super_type.id)
-        supers_serializer = SupersSerializer(supers, many=True)
-        
+    for super in super_types:
+        super_types = super_types.filter(supers_type_id = super_types.id)
+        serializer = SuperTypeSerializer(super_types, many= True)
+        custom_response_dictionary[SuperType.type]
+    
     return Response(custom_response_dictionary)
+
+
+    
+
